@@ -7,23 +7,23 @@ interface MyFunction{
 
 class LambdaEx1 {
 	
-	static void execute(MyFunction f) {	//¸Å°³º¯¼öÀÇ Å¸ÀÔÀÌ MyFunctionÀÎ ¸Ş¼­µå
+	static void execute(MyFunction f) {	//ë§¤ê°œë³€ìˆ˜ì˜ íƒ€ì…ì´ MyFunctionì¸ ë©”ì„œë“œ
 		f.run();
 	}	
 	
-	static MyFunction getMyFunction() {	//¹İÈ¯ Å¸ÀÔÀÌ MyFunctionÀÎ ¸Ş¼­µå
+	static MyFunction getMyFunction() {	//ë°˜í™˜ íƒ€ì…ì´ MyFunctionì¸ ë©”ì„œë“œ
 		MyFunction f = () -> System.out.println("f3.run()");
 		return f;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//¶ø´Ù½ÄÀ¸·Î MyFunctionÀÇ run()À» ±¸Çö
+		//ëë‹¤ì‹ìœ¼ë¡œ MyFunctionì˜ run()ì„ êµ¬í˜„
 		MyFunction f1 = () -> System.out.println("f1.run()");
 		
-		MyFunction f2 = new MyFunction() {	//ÀÍ¸í Å¬·¡½º·Î run()À» ±¸Çö
+		MyFunction f2 = new MyFunction() {	//ìµëª… í´ë˜ìŠ¤ë¡œ run()ì„ êµ¬í˜„
 			
 			@Override
-			public void run() {	//publicÀ» ¹İµå½Ã ºÙ¿©¾ß ÇÔ
+			public void run() {	//publicì„ ë°˜ë“œì‹œ ë¶™ì—¬ì•¼ í•¨
 				// TODO Auto-generated method stub
 				System.out.println("f2.run()");
 			}
